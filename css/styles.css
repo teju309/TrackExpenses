@@ -1,0 +1,410 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+}
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between; /* Align items to each end of the header */
+}
+.logoutBtn{
+    background-color: #4CAF50;
+}
+.logoutBtn:hover{
+    background-color: #4CAF50;
+}
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+#addExpenseBtn ,#searchButton,#reset{
+    display: flex;
+    align-items: center;
+}
+
+button {
+    background-color: #3d609e;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#logoutBtn{
+    margin: 0;
+    padding: 0px;
+}
+
+#addExpenseBtn{
+    margin-left: 1550px;
+    margin-right: 0px;
+    background-color: #4CAF50;
+}
+button:hover {
+    background-color: #304d7e;
+}
+
+#expenseList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.expenseItem {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+/* Styling for the expense table as a report */
+#expenseTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#expenseTable th,
+#expenseTable td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#expenseTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+#expenseTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#expenseTable tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Align text in amount column to the right */
+/* #expenseTable td:nth-child(2) {
+    text-align: right;
+} */
+
+/* Add borders to first and last columns */
+#expenseTable td:first-child,
+#expenseTable td:last-child,
+#expenseTable th:first-child,
+#expenseTable th:last-child {
+    border-left: none;
+    border-right: none;
+}
+
+/* Add padding to header cells */
+#expenseTable th {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    
+}
+i{
+    cursor: pointer;
+}
+/* Add a box shadow effect */
+#expenseTable {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin:20px;
+}
+
+/* CSS for the expense modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scrolling if modal content exceeds viewport */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* CSS for the expense modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scrolling if modal content exceeds viewport */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add Expense form styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #3d609e;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #324f82;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+    }
+}
+
+/* Style for the search fieldset */
+#search {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    margin:20px;
+    display: flex;
+  }
+  
+  /* Style for the legend */
+  #search legend {
+    font-weight: bold;
+    font-size: 20px;
+  }
+   #dashboard {
+    border: 1px solid #ccc;
+    margin: 20px; /*Adjust margin as needed */
+    border-radius: 4px;
+
+   }
+  /* Style for the legend */
+  #dashboard legend {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  /* Style for the search input */
+  #searchInput {
+    padding: 8px;
+    border: none;
+    border: 1px solid #ccc; /* Border only at the bottom */
+    font-size: 16px;
+    width: 250px; /* Adjust the width as needed */
+    margin-right: 10px; /* Add some space between input and button */
+  }
+  #categorySearch{
+    width: 250px; /* Adjust the width as needed */
+    margin-right: 10px; /* Add some space between input and button */
+
+  }
+  /* Style for the search button */
+  #searchButton {
+    padding: 8px 12px;
+    background-color: #3d609e; /* Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  #reset{
+    padding: 8px 12px;
+    background-color: #3d609e; /* Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+.graphs{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #ccc;  
+    margin: 20px 20px 20px 10px;
+    
+
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.nav-menu{
+    display: flex;
+}
+#barContainer{
+    width: 700px;
+    border: 1px solid #ccc;  
+    margin: 25px;
+}
+#pieContainer{
+    width: 1000px;
+    border: 1px solid #ccc;  
+    margin: 20px;
+}
+
+.confirmation-message {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    border-radius: 5px;
+}
+/* Ensure responsive behavior for canvas elements */
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* Add media query for small screens */
+@media screen and (max-width: 768px) {
+    .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logoutBtn {
+        margin-top: 10px;
+    }
+
+    #search {
+        flex-direction: column;
+    }
+
+    #searchInput,
+    #categorySearch {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .graphs {
+        flex-direction: column;
+    }
+
+    .graph1,
+    .graph2 {
+        width: 100%;
+    }
+
+    #expenseTable {
+        overflow-x: auto;
+    }
+}
+
+.container{
+    border: 1px solid black;
+    padding: 20px;
+    width:200px;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+.container:hover{
+    box-shadow: 5px 10px #cccccc;
+}
+.container .money{
+    border: 1px solid black;
+    border-radius:100px;
+}
+.container .money:nth-child(odd){
+    background-color: #4CAF50;
+    color:white;
+}
+.top-container{
+    margin-left:550px;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+/* Profile data styling */
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+#expenseTable thead th {
+    background-color: #4CAF50; /* Light gray background */
+    color: #ffffff; /* Dark gray text color */
+    border-bottom: 2px solid #ccc; /* Bottom border */
+}

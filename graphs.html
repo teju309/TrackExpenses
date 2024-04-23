@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+           <a href="home.html"> <img src="logo.png" width="70px" height="70px"></a> 
+            <h1> Expense tracker</h1>
+        </div>
+        <div class="nav-menu">
+            <p><button class="logoutBtn"><a href="home.html">Home</a></button></p>
+            <p><button class="logoutBtn"><a href="graphs.html">My Profile</a></button></p>
+            <p><button class="logoutBtn" onclick="logout()">Logout</button></p>
+        </div>
+    </header>
+    <h3>My Dashboard</h3>
+    <div id="dashboard">
+        <div class="user-info">
+            <img src="profile_picture.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="user-details">
+                <h2>Welcome, <span id="username">Teju</span>!</h2>
+                <p>Email: <span id="user-email">teju@example.com</span></p>
+            </div>
+        </div>
+        
+        <div class="top-container">
+            <div class="container">
+                <h1 class="money">$5000</h1>
+                <p class="title">Your Revenue</p>
+            </div>
+            <div class="container">
+                <h1 class="money">$500</h1>
+                <p class="title">Your Expenses</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="graphs">
+        <div class="graph1">
+            <label>Expense By Category</label>
+            <canvas id="expenseChart" width="80%" ></canvas>
+            
+        </div>
+
+        <div class="graph2">
+            <label>Expenses by Month</label>
+            <canvas id="expensePieChart" width="80%"></canvas>
+        </div>
+    </div>
+    
+    <script src="js/graphs.js"></script>
+</body>
+
+</html>
